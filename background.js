@@ -1,6 +1,7 @@
 class Background {
     constructor (){
         this.xBackground=0;  // x position of the image
+        // this.stone=0;
         console.log("backgorund class");
     }
     
@@ -23,8 +24,17 @@ class Background {
 
           image(bgImage, this.xBackground, 0, width, height);
           image(bgImage, this.xBackground - width, 0, width, height);
-        // image(bgImage, this.xBackground,width, height);
-        // image(bgImage, this.xBackground+width, width, height);
+
+        //   this.stone +=3;
+        //   if (this.stone >= width) {
+        //     this.stone = 0;
+        //   }
+   
+        //    image(stone, this.stone, 0, width, height);
+        //    image(stone, this.stone - width, 0, width, height);
+
+
+        
         
          
 

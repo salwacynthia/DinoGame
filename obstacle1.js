@@ -1,7 +1,8 @@
-class Obstacle {
+class Obstacle1 {
     constructor() {
-      this.x = 0;
-      this.y = 0
+     
+      this.x=width/40;
+      this.y= height-220;
     }
 
     
@@ -10,13 +11,18 @@ class Obstacle {
     }
     
     draw (){
-    // image(GoodDinoImage, 0,0,width/10,height/10);
-    this.x=width/5;
-    this.y= height/3.2;
+    
+    this.x += 4;
+         if (this.x >= width) {
+         this.x = 0;
+         }
 
-    // image(GoodDinoImage, width-x,height-y,width/16,height/10);
-     //BadDinoImage.position( width , height+y);
-     BadDinoImage.position(width-this.x, height-this.y);
-
+         BadDinoImage.position(this.x, this.y);
+         BadDinoImage.position(this.x - width/7, this.y);
+ 
+         // image(BadDino2Image, this.x, this.y, width/16, height/10);
+         // image(BadDino2Image, this.x - width/2, this.y,width/16, height/10);
+     
+    //  BadDinoImage.position(width-this.x, height-this.y);
     }
 }
