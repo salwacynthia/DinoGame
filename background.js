@@ -4,6 +4,7 @@ class Background {
       // this.stone=0;
       console.log("backgorund class");
       this.stone=0;
+      this.bird=0;
   }
   
 
@@ -15,8 +16,8 @@ class Background {
       // img (x,y,w,h)
       
      // image(bgImage, 0,0,width,height);
-    
-
+     this.bird += 3;
+     bird.position(100, 50);
       this.xBackground += 3;
 
         if (this.xBackground >= width) {

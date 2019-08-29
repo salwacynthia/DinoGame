@@ -17,13 +17,12 @@ function draw(){
     background.draw();
     player.draw();
     game.draw();
-          if (frameCount % 500 === 0){
+          if (frameCount % 1000 === 0){
             console.log("gameover")
             // clear(); 
-            // noLoop();           
-            image(flower, 50, 50)};
-
-
+            image(gameover, 50, 50, 600,400)
+            noLoop();           
+        };
 
 }
     
@@ -33,7 +32,4 @@ function keyPressed() {
     player.jump();
   }
 
-//   function collision(player, obeject){
  
-
-//   }

@@ -1,45 +1,25 @@
-/* #cityBoard */
-/* .container{
+  *{
 
-    background-image: url("images/background.jpg");
-    background-repeat: no-repeat;
-    height;
-  
-
-} */
-/* 
-html, body {
-    height: 100%;
-    margin: 0;
-  }
-   */
-
-   *{
-
-    cursor:none;
+    /* cursor:none; */
    }
-  .container {
-    height: 100%;
-    /* background: rgb(65, 172, 172); */
-    background-image: url("images/output-onlinepngtools(2).jpg");
-    
+
+   #div1 {
+    width: 800px;
+    height: 500px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    background-image: url("images/citynew.png");
   }
-canvas{       
-   background: red;
-    border-style: solid;
-    border-width: 5px;
-    
-    margin-top: 60px; 
-    margin-left: 30px;
-    margin-right: 30px;  
-    /* justify-self: center; */
-
-}
-
-  #cityBoard{
+  
+  .container {
+    height: 80%;
+    /* background: rgb(65, 172, 172); */
+    border: black;
+    background-color: aqua;
     display: flex;
     justify-content: center;
     align-content: center; 
     align-items: center;
     align-content: center; 
+    
   }
