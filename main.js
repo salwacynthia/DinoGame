@@ -1,4 +1,3 @@
-
 let background= new Background();
 let player=new Player();
 let obstacle1= new Obstacle1();
@@ -16,13 +15,19 @@ function setup (){
 function draw(){
     clear()
     background.draw();
-
     player.draw();
-    obstacle1.draw();
-    obstacle2.draw();
     game.draw();
-    
+          if (frameCount % 500 === 0){
+            console.log("gameover")
+            // clear(); 
+            // noLoop();           
+            image(flower, 50, 50)};
+
+
+
 }
+    
+
 
 function keyPressed() {
     player.jump();

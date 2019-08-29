@@ -1,57 +1,62 @@
 class Game {
 
   constructor(){
-    this.Px2 = player.x;
-    this.Py2 = player.y;
-    this.BDx1 = obstacle1.x;
-    this.BDy1 = obstacle1.y;
-    
-    
-    // this.obstacles=[];
-    
+    // this.Px2 = player.x;
+    // this.Py2 = player.y;
+    // this.BDx1 = obstacle1.x;
+    // this.BDy1 = obstacle1.y;
+    this.player=new Player();
+    this.obstacle=[];
+    let collision=0;
+    // this.collid=0;//to check the colliion number
   }
     setup(){
         this.background.setup();
-        
     }
+    //if(frameCount % 300 ===0){
+    //this.obstacles.push(new Obstacle1())
+    //}
+    //this.obstacles.forEach(obstacle=>obstacle.draw())
+     // with one object
     draw(){
-      //if(frameCount % 300 ===0){
-      //this.obstacles.push(new Obstacle1())
-      //}
-      //this.obstacles.forEach(obstacle=>obstacle.draw())
-       // with one object
-      if(this.collisionCheck(obstacle2, player)){
-          console.log("hit");
-           obstacle2.collided = true
-         }
+     // this.player.draw();
+             // main timing 
 
-     
-    }
+            //  if (frameCount % 500 === 0){
+            //   console.log("gameover")
+            //   clear(); 
+            //   noLoop();           
+            // image(flower, 50, 50)};
+            
 
-    // getDistance(objectA,objectB){  //
+     if (frameCount % 150 === 0){ 
+      this.obstacle.push(new Obstacle1());
+      }
+      if (frameCount % 250===0){    // drawing obstacle 2
+        this.obstacle.push(new Obstacle2());
+      }
+
+     this.obstacle.forEach((element)=>{
+            element.draw();
+            // if 
+            if(this.collisionCheck(element, player)){
+                console.log("hit");
+                 element.collided = true
+                 // increment score
+              }
+          })
         
-    //     let X=objectA.x - objectB.x;
-    //     let Y=objectA.y - objectB.y;
-        
-    //     return Math.sqrt(Math.pow(X,2)+Math.pow(Y,2));
-    //    }
-
-    
-  collisionCheck(obstacle, player) {
+        }
+   collisionCheck(obstacle, player){
       // console.log(obstacle.x,obstacle.y,player.x,player.y)
-    if (
-      player.x + player.width <= obstacle.x || // player's right edge is left of the left edge of the obstacle
-      obstacle.x + obstacle.width <= player.x // obstacle's right edge is left of the left edge of the player
-    ) {
+    if (player.x + player.width <= obstacle.x ||  obstacle.x <= player.x ){
       return false;
     }
-    if (
-      player.y + player.height <= obstacle.y || // player's bottom edge is top of the obstacle's top edge
-      obstacle.y + obstacle.height <= player.y // obstacle's bottom edge is top of the player's top edge
-    ) {
+    if (player.y + player.height <= obstacle.y ||  obstacle.y + obstacle.height <= player.y){
       return false;
     }
+      // debugger
+    
     return true;
   }
-
 }

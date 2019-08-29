@@ -28,7 +28,7 @@ class Player {
         
       this.x=width-600;
       //this.y= height/3.2;
-    
+        console.log(this.y)
       GoodDinoImage.position(this.x, this.y-80);
       }
    

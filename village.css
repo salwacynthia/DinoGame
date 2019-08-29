@@ -1,0 +1,21 @@
+body{
+
+    margin-top: 50px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:black;
+    }
+.village {
+    /* height: 500px;
+    width:1200px; */
+    /* background-image: url("images/village2.jpg"); */
+    /* background-repeat: no-repeat; */
+    background-color:black; 
+    
+    margin-right:40px;
+
+  }
+
+  
