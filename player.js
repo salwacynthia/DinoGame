@@ -4,14 +4,11 @@ class Player {
       //this.y=0; // keeps track of movement
       this.gravity=0.2;
       this.velocity=0;
+      this.width = 120;
+      this.height= 90;
       // this.yVelocity=100;
       this.jumpCount=0;
-      // this.controller = {
-      //   left:false,
-      //   right:false,
-      //   up:false,
-  
-      //   }
+     
     }
    
     setup(){
@@ -21,9 +18,7 @@ class Player {
     
     draw (){
 
-      this.velocity += this.gravity;
-        // when velocity is negative, y decreases (player goes up)
-        // when velocity is positive, y increases (player goes down)
+      this.velocity += this.gravity;   //neg velocity, y kome player upore jay
         this.y += this.velocity;
         if (this.y >= this.move) {
           this.y = this.move;
@@ -34,13 +29,13 @@ class Player {
       this.x=width-600;
       //this.y= height/3.2;
     
-      GoodDinoImage.position(this.x, this.y-135);
+      GoodDinoImage.position(this.x, this.y-80);
       }
    
       jump() {
         
         
-        if (keyCode === 38 && this.jumpCount < 2) {
+        if (keyCode === 38 && this.jumpCount < 1) {
           console.log("jump");
           this.velocity =-8;
           this.jumpCount++;

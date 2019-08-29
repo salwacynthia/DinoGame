@@ -3,6 +3,7 @@ let background= new Background();
 let player=new Player();
 let obstacle1= new Obstacle1();
 let obstacle2= new Obstacle2();
+let game=new Game;
 
 
 function setup (){
@@ -19,6 +20,7 @@ function draw(){
     player.draw();
     obstacle1.draw();
     obstacle2.draw();
+    game.draw();
     
 }
 

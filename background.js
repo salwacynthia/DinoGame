@@ -3,6 +3,7 @@ class Background {
         this.xBackground=0;  // x position of the image
         // this.stone=0;
         console.log("backgorund class");
+        this.stone=0;
     }
     
 
@@ -25,13 +26,13 @@ class Background {
           image(bgImage, this.xBackground, 0, width, height);
           image(bgImage, this.xBackground - width, 0, width, height);
 
-        //   this.stone +=3;
-        //   if (this.stone >= width) {
-        //     this.stone = 0;
-        //   }
+          this.stone +=3;
+          if (this.stone >= width) {
+            this.stone = 0;
+          }
    
-        //    image(stone, this.stone, 0, width, height);
-        //    image(stone, this.stone - width, 0, width, height);
+           image(stone, this.stone, 350, width/10, height/10);
+           image(stone, this.stone - width, 350, width/10, height/4);
 
 
         
