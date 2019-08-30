@@ -18,10 +18,10 @@ class Obstacle2 {
   this.x += 3;
        
       if(!this.collided){
-        image(BadDino2Image, this.x, 300, width/16, height/10);
+        image(BadDino2Image, this.x, 350, width/16, height/10);
         // image(BadDino2Image, this.x - width, 310,width/16, height/10);
       }else{
-        image(newDino, this.x, 300, width/16, height/10);
+        image(newDino, this.x, 350, width/16, height/10);
         // image(newDino, this.x - width, 310,width/16, height/10);
       }
      

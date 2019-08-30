@@ -7,6 +7,8 @@ let game=new Game;
 
 function setup (){
    let canvas=  createCanvas (width, height);
+   backgroundSound.setVolume(0.1);
+   backgroundSound.play();
    canvas.parent("gameBoard");
     console.log("main js file");
     player.setup();
@@ -17,10 +19,10 @@ function draw(){
     background.draw();
     player.draw();
     game.draw();
-          if (frameCount % 1000 === 0){
+          if (frameCount % 1200 === 0){
             console.log("gameover")
             // clear(); 
-            image(gameover, 50, 50, 600,400)
+            image(gameover, 100, 50, 600,400)
             noLoop();           
         };
 

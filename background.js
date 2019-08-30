@@ -18,9 +18,9 @@ class Background {
      // image(bgImage, 0,0,width,height);
      this.bird += 3;
      bird.position(100, 50);
-      this.xBackground += 3;
 
-        if (this.xBackground >= width) {
+      this.xBackground += 3;
+      if (this.xBackground >= width) {
        this.xBackground = 0;
        }
 
